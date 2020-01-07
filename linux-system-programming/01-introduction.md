@@ -10,11 +10,11 @@
 
     1. The `compilation step` produces an `object file` containing the instructions to execute.
 
-    2. The `link step` produces an `excutable file` from a set of `object files`.
+    2. The `link step` produces an `executable file` from a set of `object files`.
 
 4. `Libraries` are object files containing functionality that wants to be shared `between applications`.
 
-    * e.g. A `collection datastructure` library.
+    * e.g. A `collection data structure` library.
 
 5. `C` programs are typically structured using:
 
@@ -30,9 +30,9 @@
 
 ---
 
-## `gcc` - Basic cCmpilation and Linking
+## `gcc` - Basic Compilation and Linking
 
-1. Basic `gcc` compilation: `gcc -c source.c -o compilied.o`
+1. Basic `gcc` compilation: `gcc -c source.c -o compiled.o`
 
 2. You should always be able to compile a source file independently.
 
@@ -55,5 +55,5 @@
 * `-l` - Use and links with a specific library file. `-l$filepath`.
 * `-L` - Looks in directory for library files. `-L$dirpath`.
 * `-D` - Defines a macro to be used by the preprocessor. `-Dname=definition`
-* `-E` - Apply the preprocessor to performa text substitution without compiling.
+* `-E` - Apply the preprocessor to perform text substitution without compiling.
 

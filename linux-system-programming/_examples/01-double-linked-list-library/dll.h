@@ -1,3 +1,6 @@
+#ifndef __DLL__
+#define __DLL__
+
 // Double-Linked-List Header --------------------------------------------------
 
 // Types
@@ -24,3 +27,5 @@ get_new_dll();
 // Return 0 if successful.
 int
 add_data_to_dll (dll_t *dll, void *app_data);
+
+#endif
