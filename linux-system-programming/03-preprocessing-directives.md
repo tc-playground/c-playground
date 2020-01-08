@@ -6,7 +6,7 @@
 
     * Exist on a single line.
 
-    * * `\` - Can be used to cosmetically split directives. 
+    * `\` - Can be used to cosmetically split directives. 
 
 *  `Macro` - A token and a bit of code. The token gets expanded into the code by the preprocessor.
 
