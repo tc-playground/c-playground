@@ -8,6 +8,9 @@
         "filepath",
         "ifdef",
         "ifndef",
+        "ldconfig",
+        "libdll",
+        "libname",
         "subsitute",
         "substitued"
     ]
