@@ -3,6 +3,7 @@
         "Dname",
         "Idirpath",
         "Struct",
+        "backtrace",
         "dirpath",
         "elif",
         "filepath",
