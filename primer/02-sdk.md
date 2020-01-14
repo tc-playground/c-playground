@@ -1,4 +1,10 @@
-# GDB Debugger
+# SDK
+
+## GCC Compiler
+
+---
+
+## GDB Debugger
 
 1. `gcc -Wall -g <program>.c` - Compile with debug symbols preserved using `-g`.
 
