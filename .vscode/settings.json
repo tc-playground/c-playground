@@ -2,6 +2,7 @@
     "cSpell.words": [
         "Dname",
         "Idirpath",
+        "LKMPG",
         "Struct",
         "backtrace",
         "dirpath",
@@ -9,6 +10,8 @@
         "filepath",
         "ifdef",
         "ifndef",
+        "insmod",
+        "kallsyms",
         "ldconfig",
         "libdll",
         "libname",
