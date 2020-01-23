@@ -5,6 +5,7 @@
         "LKMPG",
         "Struct",
         "backtrace",
+        "depmod",
         "dirpath",
         "elif",
         "filepath",
@@ -12,10 +13,17 @@
         "ifndef",
         "insmod",
         "kallsyms",
+        "kmod",
         "ldconfig",
         "libdll",
         "libname",
+        "lsmod",
+        "modprobe",
+        "msdos",
+        "mymod",
+        "procfs",
         "subsitute",
-        "substitued"
+        "substitued",
+        "uname"
     ]
 }
