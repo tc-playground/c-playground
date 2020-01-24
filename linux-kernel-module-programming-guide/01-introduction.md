@@ -17,6 +17,10 @@
     insmod /lib/modules/2.6.11/kernel/fs/msdos/msdos.ko
     ```
 
+4. Modules are `versioned` and must be compiled for the `release` of the kernel they are deployed to.
+
+    * `/lib/modules/$(uname -r)`
+
 ---
 
 ## Commands
@@ -27,7 +31,11 @@
 
 * `insmod /lib/modules/$KERNEL_RELEASE/kernel/$PATH_TO_MODULE.ko` - _Load_ a specific kernel module. Requires the full path to the module. 
 
-* `modprobe $MODULE_NAME` - _Load_ MODULE_NAME and any of its dependencies. Requires just the module name.
+* `modprobe $MODULE` - _Load_ %MODULE and any of its dependencies. Requires just the module name.
+
+* `modinfo $MODULE` - Get information on the specified $MODULE.
+
+* `rmmod $MODULE` - Remove the the specified $MODULE.
 
 ---
 
