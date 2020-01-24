@@ -3,9 +3,15 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/src/linux-headers-5.3.0-26-generic/include/**",
+                "/usr/src/linux-headers-5.3.0-26-generic/arch/x86/include/**",
+                "/usr/src/linux-headers-5.3.0-26-generic/include/**",
+                "/usr/src/linux-headers-5.3.0-26-generic/arch/x86/include/**"
             ],
-            "defines": [],
+            "defines": [
+                "__KERNEL__"
+            ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",

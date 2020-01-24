@@ -18,10 +18,13 @@
         "libdll",
         "libname",
         "lsmod",
+        "modinfo",
         "modprobe",
         "msdos",
         "mymod",
+        "printk",
         "procfs",
+        "rmmod",
         "subsitute",
         "substitued",
         "uname"
