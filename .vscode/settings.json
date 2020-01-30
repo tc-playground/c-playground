@@ -30,6 +30,7 @@
         "realloc",
         "rmmod",
         "sbrk",
+        "stackframe",
         "subsitute",
         "substitued",
         "uname"

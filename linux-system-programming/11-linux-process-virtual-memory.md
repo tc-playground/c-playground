@@ -87,7 +87,31 @@
 
 1. Each time a `process` invokes a procedure call a new `stack frame` is _created_ and (`pushed`) on the `stack memory`.
 
+    1. __Caller__ - Push arguments list in revers order onto the new callee stack frame.
+
+    2. __Caller__ - Push the address of the next instruction as the `return address` onto the new callee stack frame.
+
+    3. __Caller__ - Set the `PC` to the first instruction of the `callee`.
+
+    4. __Callee__ - Push the caller's stackframe base pointer onto the callee stack frame.
+
+    5. __Callee__ - Push the local variable onto the callee stack frame.
+
+    6. __Callee__ - Begin execution.
+
 2. Each time a `process` completes and `returns` from a procedure call the `stack frame` is _destroyed_ (`popped`) off the `stack memory`.
+
+    1. __Callee__ - Set the return value of the callee in the `eax` register.
+
+    2. __Callee__ - Increase the `SP` by the amount used by the stackframe.
+
+    3. __Callee__ - Restore `ebp` to point to the callers stackframe and pop the previous frames base pointer from teh stack.
+
+    4. __Callee__ - Set `eip` to the return address saved in the callee's stackframe and pop the return address from teh stack.
+
+    5. __Caller__ - Pops all the arguments it passed to the callee stackframe.
+
+    6. __Caller__ - Read the value stored in `eax` return register and resume exeucting from `eip`.
 
 3. The `execution of procedure call` is carried out using various processor registers:
 
@@ -124,3 +148,6 @@
     ```
 
 3. `Stack Corruptions` occur when any part of the unallocated `virtual address space` is used. A `segmentation fault` is created.
+
+---
+
