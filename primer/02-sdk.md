@@ -6,55 +6,69 @@
 
 ## GDB Debugger
 
-1. `gcc -Wall -g <program>.c` - Compile with debug symbols preserved using `-g`.
+* `gcc -Wall -g <program>.c` - Compile with debug symbols preserved using `-g`.
 
-2. `gdb <program> [--args <arg1> ... <argN>]` - Open the specified executable in _gdb_.
+* `gdb <program> [--args <arg1> ... <argN>]` - Open the specified executable in _gdb_.
 
-2. `tui enable` - Open Text User Interface panel to show debug state.
+* `tui enable` - Open Text User Interface panel to show debug state.
 
     * `tui reg all` - Show all registers.
     
-    2. `layout next` - Go to next TUI info pane.
+    * `layout next` - Go to next TUI info pane.
 
-3. `set args <arg1> <arg2>` - Set the arguments to main.
+* `set args <arg1> <arg2>` - Set the arguments to main.
 
-3. `run` - Start execution.
+* `run` - Start execution.
 
-4. `start` - Start execution and break at main.
+* `start` - Start execution and break at main.
 
-4. `list` - List the current source file.
+* `list` - List the current source file.
 
-4. `<ctrl+c>` - Halt execution.
+* `<ctrl+c>` - Halt execution.
 
-5. `next` / `n` - Go to the next line and execute it.
+* `next` / `n` - Go to the next line and execute it.
 
-5. `step` / `s` - Step into a function and execute the first line.
+* `step` / `s` - Step into a function and execute the first line. Move forward one machine instruction.
 
-5. `continue ` / `c` - Continue until the next breakpoint is reached.
+* `reverse-stepi` - Step backward one machine instruction.
+
+* `continue ` / `c` - Continue until the next breakpoint is reached.
 
 * `refresh` / `<ctrl-L> - Refresh.
 
 * `break <POINT>` - Set a breakpoint: line number, function, etc.
 
-    1. `break main` - Break point on main function.
+    * `break main` - Break point on main function.
 
-    2. `break main.c:10`  - Breakpoint on main.c file, line 10.
+    * `break main.c:10`  - Breakpoint on main.c file, line 10.
 
 * `clear <POINT>` - Clear a breakpoint: line number, function, etc.
 
 * `info break` - List breakpoints.
 
+* `watch <VARIABLE>` - Watch the value of a variable.
+
 * `print <VARIABLE>` - Display the value of a variable.
 
 * `print *<ARRAY>@<LEN>` - Display the value of an array of the specified length. `*` dereferences the elements in the array.
 
-* `watch <VARIABLE>` - Watch the value of a variable.
+* `print $pc` - Print the _Program Counter_.
 
-* `backtrace full` - Get the stack trace after a _Segmentation Fault_.
+* `examine $1` / `x $1` - Examine memory the contents of the specified address.
+
+* `backtrace full` / `bt full` - Get the stack trace after a _Segmentation Fault_.
+
+* `record` - Record a session to allow reverse debugging.
+
+* `disassembly` / `dissam` - Get the disassembly for the current function.
+
+* `whatis $var` - Get type of variable.
 
 * `<ctrl-p>` / `<ctrl-n>` - Previous and next command. 
 
 * `python print("Hello World");` - Run embedded python interpreter.
+
+* `gdb -c core.259` - Debug a core dump.
 
 ---
 
@@ -64,9 +78,6 @@
 
 * [GDB Tip and Tricks](https://www.youtube.com/watch?v=PorfLSr3DDI)
 
-https://www.youtube.com/watch?v=-n9Fkq1e6sg
+* [GDB - A lot more than you Knew](https://www.youtube.com/watch?v=-n9Fkq1e6sg)
 
 * [Quick Intro](https://web.eecs.umich.edu/~sugih/pointers/gdbQS.html)
-
-
-
