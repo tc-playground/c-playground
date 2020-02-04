@@ -9,6 +9,7 @@
         "calloc",
         "depmod",
         "dirpath",
+        "dissam",
         "elif",
         "filepath",
         "ifdef",
@@ -31,8 +32,10 @@
         "rmmod",
         "sbrk",
         "stackframe",
+        "stepi",
         "subsitute",
         "substitued",
-        "uname"
+        "uname",
+        "whatis"
     ]
 }
