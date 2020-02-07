@@ -7,7 +7,7 @@
  * Note the function prototype */
 int hello_world_init_module(void){
 
-    printk(KERN_INFO "SimpleKM module Loaded Successfully\n");
+    printk(KERN_INFO "SimpleKM module loaded Successfully\n");
     /*
      * A non 0 return means init_module failed; module can't be loaded.
      */

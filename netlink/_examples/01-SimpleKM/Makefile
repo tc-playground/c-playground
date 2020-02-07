@@ -1,5 +1,7 @@
 obj-m += simpleKM.o
 
+all: build
+
 pre:
 	sudo apt install linux-headers-$$(uname -r)
 
@@ -11,6 +13,9 @@ unload:
 
 build:
 	make -C /lib/modules/`uname -r`/build M=$(PWD) modules
+
+logs:
+	sudo dmesg
 
 clean:
 	make -C /lib/modules/`uname -r`/build M=$(PWD) clean
