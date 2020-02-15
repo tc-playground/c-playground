@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "Beej's",
         "Commandline",
         "Dname",
         "ICMP",
@@ -12,6 +13,7 @@
         "Struct",
         "UEFI",
         "Uninitialised",
+        "Youtube",
         "backtrace",
         "callee's",
         "calloc",
@@ -54,6 +56,7 @@
         "stepi",
         "subsitute",
         "substitued",
+        "tracepoints",
         "uname",
         "whatis"
     ]
