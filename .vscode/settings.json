@@ -46,6 +46,7 @@
         "mymod",
         "nlmsg",
         "nlmsgh",
+        "nlmsghdr",
         "organised",
         "printk",
         "procfs",
@@ -59,5 +60,8 @@
         "tracepoints",
         "uname",
         "whatis"
-    ]
+    ],
+    "files.associations": {
+        "module.h": "c"
+    }
 }
