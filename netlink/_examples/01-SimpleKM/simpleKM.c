@@ -1,10 +1,9 @@
 /*
 * simpleKM.c − The simplest kernel module.
 */
-#include <linux/module.h> 	     /* Needed by all modules */
+#include <linux/module.h>   // Required by all kernel modules
 
-/* This function shall be invoked as soon as this LKM is loaded.
- * Note the function prototype */
+// This function shall be invoked as soon as this LKM is loaded.
 int hello_world_init_module(void){
 
     printk(KERN_INFO "SimpleKM module loaded Successfully\n");
@@ -15,29 +14,23 @@ int hello_world_init_module(void){
 }
 
 
-/* Visit my Webiste : https://csepracticals.wixsite.com/csepracticals
- * for other courses for free or on discounted price. Take a look !! */
-
-
-
-/* This function shall be invoked as soon as this LKM is unloaded.
- * Note the function prototype */
+// This function shall be invoked as soon as this LKM is unloaded.
 void hello_world_cleanup_module(void){
 
     printk(KERN_INFO "SimpleKM module unloaded successfully.\n");
 }
 
-/* Tell the kernel which are init and cleanup functions for
- * this module. If you do not do this registration, kernel would
- * try to use 'init_module' and 'cleanup_module' instead */
+// Tell the kernel which are init and cleanup functions for this module. 
+// If you do not do this registration, kernel would try to use 'init_module' 
+// and 'cleanup_module' instead
 module_init(hello_world_init_module);
 module_exit(hello_world_cleanup_module);
 
-/*Module Information*/
+// Module Information
 #define AUTHOR_NAME "Temple Cloud"
 #define MODULE_DESC "A simple kernel module"
 
-MODULE_AUTHOR(AUTHOR_NAME);         /* Who wrote this module? */
-MODULE_DESCRIPTION(MODULE_DESC);    /* What does this module do ?*/
+MODULE_AUTHOR(AUTHOR_NAME);         // Who wrote this module?
+MODULE_DESCRIPTION(MODULE_DESC);    // What does this module do?
 MODULE_LICENSE("GPL");
 
